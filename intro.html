@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1;" />
+        <link rel=”stylesheet” href=”style.css”/>
+        <title> Introduction </title>
+
+        <style>
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: black;
+    margin: 0;
+    overflow: hidden; /* Evite la scrollbar */
+
+    /* Center les éléments */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.a-long-time-ago {
+    /* cosmétique */
+    font-size: 32px;
+    color: #4bd5ee;
+    /* Animation: Apparition et disparition progressive */
+    opacity: 0;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-name: a-long-time-ago;
+    animation-timing-function: ease-out;
+}
+
+@keyframes a-long-time-ago {
+    0%   { opacity: 0; }
+    20%  { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.crawl {
+    /* centrage de l'élément' */
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 800px;
+    margin: 0 0 0 -400px;
+    top: auto;
+    bottom: 0;
+    height: 50em;
+    /* cosmétique */
+    color: #ffff66;
+    font-size: 64px;
+    text-align: justify;
+    /* Applique la transformation  */
+    transform-origin: center bottom;
+    transform: perspective(300px) rotateX(15deg);
+}
+
+.crawl > div {
+    /* positionne la div en bas de l'écran (non visible) */
+    /* l'animation la fait remonter progressivement */
+    position: absolute;
+    top: 100%;
+    animation-delay: 4s; /* Démarre l'animation après la première */
+    animation-duration: 35s;
+    animation-name: crawl;
+    animation-timing-function: linear;
+}
+
+@keyframes crawl {
+    0% {
+        top: 100%;
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1; /* disparition progressive à la fin */
+    }
+
+    100% {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+.button {
+    position: absolute;
+    top: 44%;
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
+	background:-moz-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-webkit-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-o-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-ms-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
+	background-color:#79bbff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:28px;
+	font-weight:bold;
+	padding:32px 60px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+    animation-duration: 45s;
+    animation-name: button;
+    animation-timing-function: linear;
+
+            }
+
+@keyframes button {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+
+        <div class="a-long-time-ago">
+  Il y a bien longtemps, dans une galaxie
+  <br>lointaine, très lointaine...
+</div>
+
+
+
+<div class="crawl">
+  <div>
+    <p>
+      Kévin s’est levé ce matin insouciant, sans imaginer que des hommes pas très sympas, le genre d’hommes qu’on craint d’inviter aux barbecues entre amis, l’attendraient pour lui faire la peau.
+    </p>
+    <p>
+      Pourquoi ? Seul lui le sait, et ce n’est pas du tout une excuse à notre paresse scénaristique. Pour se sortir de ce guêpier, Kévin a besoin d’être guidé, parce qu’il est loin d’être malin…
+    </p>
+    <p>
+      Aujourd’hui, vous êtes sa conscience, alors faites lui faire les bons choix.
+    </p>
+  </div>
+</div>
+
+<a id="commencer" class="button" href="main.html">Commencer</a>
+
+<audio preload="auto" autoplay>
+    <source src="theme-star_wars.mp3" type="audio/mpeg" />
+</audio>
+
+<script>
+        document.write('<embed src="stars-wars.mp3" width="0" height="0" controls="console" loop="false" autostart="true" ></embed>');  
+</script>
+    </body>
+</html>

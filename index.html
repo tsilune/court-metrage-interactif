@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Kevin - Le Jeu</title>
+    <style>
+
+    @font-face {
+    font-family: 'arberkley';
+    src: url('quadranta.otf') format('truetype'),
+         url('quadranta.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+      section {
+       margin: 0 auto;
+       width: 62vw;
+       height: 100vh;
+       text-align: justify;
+       display: flex;
+       flex-direction: column;
+       color: white;
+      }
+
+      aside {
+        background-color: #303030;
+        margin: auto;
+        padding: 1.5vw 1.5vw 1.5vw 1.5vw;
+      }
+
+      h1, h3 {
+        text-align: center;
+        font-family:arberkley, sans-serif;
+      }
+
+      div {
+        text-align: center;
+        margin: 0 auto;
+      }
+      div button {
+        margin-top: 1vh;
+        border-radius:6px;
+      	border:1px solid #84bbf3;
+      color:#ffffff;
+      font-family:Trebuchet MS;
+      font-weight:bold;
+      text-decoration:none;
+      background-color:#79bbff;
+      background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+      cursor:pointer;
+      }
+
+      video {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          z-index: -100;
+          transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
+        transition: 1s opacity;
+        filter: blur(20px);
+        background: url('img/guigui.png') no-repeat;
+      }
+
+    </style>
+  </head>
+
+
+<body>
+
+  <section>
+
+    <aside class="">
+      <h1>Bienvenue dans Kevin le jeu !</h1> <br>
+
+      Ce jeu est un film interactif : autrement dit, vous allez vous mettre à la place du protagoniste de cette histoire, et de temps à autre, vous devrez faire un choix, entre deux directions, ou bien deux actions, par des boutons qui apparaissent sur l’écran. Un passage du jeu vous demandera de chercher et cliquer sur des éléments cliquables avec le curseur de votre souris. <br><br>
+      Une discrète barre de progression, située en haut à gauche de l'écran, vous indiquera votre avancement dans l'histoire. <br> <br>
+      Pour jouer dans des conditions optimales, ouvrez le jeu en plein écran, ou bien réduisez la résolution de la fenêtre en diagonale, et jouez avec le son pour profiter de bruitages remarquables. <br><br>
+
+      <div>Bon jeu. <br>
+      <a href="intro.html"><button type="button" name="button">Jouer</button></a></div> <br>
+      <h3>Jeu réalisé par Guillaume Bihermand, Valentin Giron & Tsilune Ruttner</h3>
+
+    </aside>
+
+  </section>
+
+  <div>
+    <video onload="" id="vid" autoplay muted loop>
+        <source id="videoDebut" src="video/intro.mp4" type="video/mp4">
+    </video>
+  </div>
+
+<script>
+  var name = prompt("Comment vous appelez-vous ?");
+  document.cookie = 'nom=name; expires=2 Aug 2025 20:47:11 UTC; path=/';
+</script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

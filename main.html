@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Kevin - Le jeu</title>
+
+    <body>
+      <header id="header">
+        <div id="circle0"></div>
+        <div id="circle1"></div>
+        <div id="circle2"></div>
+        <div id="circle3"></div>
+        <div id="circle4"></div>
+        <div id="circle5"></div>
+        <div id="circle6"></div>
+      </header>
+
+      <div id="img-para">
+        <img width="100vw" height="auto" src="img/img-para.png" alt="">
+      </div>
+
+      <div id="img-ech">
+        <img width="100vw" height="auto" src="img/img-ech.png" alt="">
+      </div>
+
+
+
+      <div class="cafet" id="machine">
+
+      </div>
+      <div class="cafet" id="parapluie">
+
+      </div>
+      <div class="cafet" id="echarpe">
+
+      </div>
+
+      <div id="pause">
+        <button>Pause</button>
+      </div>
+
+      <h3 id="real">Jeu réalisé par Guillaume Bihermand, Valentin Giron & Tsilune Ruttner</h3>
+
+      <p id="decor">Choisissez un élément du décor</p>
+
+      <div>
+        <button class="combat2" id="up2">Déployer le parapluie</button>
+      </div>
+      <div>
+        <button class="combat2" id="down2">Frapper la jambe</button>
+      </div>
+
+      <h1 id="nom"></h1>
+
+      <div>
+        <button class="combat" id="up">Frapper le visage</button>
+      </div>
+      <div>
+        <button class="combat" id="down">Frapper la jambe</button>
+      </div>
+
+
+
+      <div>
+        <video onload="" id="vid" autoplay>
+            <source id="videoDebut" src="video/intro.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div onclick="video()" class="dirButton" id="bd"><img src="img/next2.png" width="50em" id="btnd"> </div>
+      <div onclick="video()" class="dirButton" id="bg"><img src="img/back2.png" width="50em" id="btng"> </div>
+      <section>
+        <div class="goButton" id="restart">
+          <button>Retourner au dernier checkpoint</button>
+        </div>
+        <div class="goButton" id="debut">
+          <button>Retourner au début du jeu</button>
+        </div>
+      </section>
+
+      <script>
+
+
+      var vid = document.getElementById('vid');
+      var appButton;
+      var i = 0;
+      var c = 0;
+
+      //COOKIE POUR LE NOM DU JOUEUR
+      function lireCookie(nom) {
+        // Ajoute le signe égale virgule au nom
+        // pour la recherche
+        var nom2 = nom + "=";
+        // Array contenant tous les cookies
+        var arrCookies = document.cookie.split(';');
+        // Cherche l'array pour le cookie en question
+        for(var i=0;i < arrCookies.length;i++) {
+          var a = arrCookies[i];
+          // Si c'est un espace, enlever
+          while (a.charAt(0)==' ') {
+            a = a.substring(1,a.length);
+                }
+            if (c.andexOf(nom2) == 0) {
+                  return a.substring(nom2.length,a.length);
+                }
+              }
+        // Aucun cookie trouvé
+        return null;
+
+      }
+
+
+      document.getElementById('nom').innerHTML = name;
+
+      </script>
+
+
+    <script type="text/javascript" src="js/pause_button.js"></script>
+    <script type="text/javascript" src="js/gameOverButton.js"></script>
+    <script type="text/javascript" src="js/fVideo.js"></script>
+    <script type="text/javascript" src="js/fHide.js"></script>
+    <script type="text/javascript" src="js/fDisp.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
